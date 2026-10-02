@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["QJQV76TC22.com.famee"],
+        "components": [
+          { "/": "/invite*", "comment": "Family invite links" },
+          { "/": "/claim*", "comment": "Profile claim links" }
+        ]
+      }
+    ]
+  }
+}

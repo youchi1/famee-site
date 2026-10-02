@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Someone invited you to join their family on Famee.">
+  <title>You're invited to a family | Famee</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main>
+    <nav aria-label="Site navigation">
+      <a href="../">Famee</a>
+      <a href="../support/">Support</a>
+    </nav>
+    <header>
+      <h1>You're invited to a family</h1>
+      <p class="summary">Someone invited you to join their family on Famee.</p>
+    </header>
+    <section>
+      <h2>Already have Famee?</h2>
+      <p><a class="button" id="open-app" href="famee://invite">Open in Famee</a></p>
+    </section>
+    <section>
+      <h2>Get Famee</h2>
+      <p>Install Famee, then open this link again.</p>
+      <p>
+        <a class="button" href="https://apps.apple.com/app/id6804414986">App Store</a>
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.famee">Google Play</a>
+      </p>
+    </section>
+  </main>
+  <script>
+    document.getElementById("open-app").href = "famee://invite" + window.location.search;
+  </script>
+</body>
+</html>
