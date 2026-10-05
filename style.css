@@ -1,6 +1,6 @@
 /* Tokens mirror apps/mobile/src/global.css in the famee app. */
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --canvas: #fbf6f0;
   --surface: #ffffff;
   --surface-2: #f5ede4;
@@ -19,22 +19,6 @@
   --m-plum: #b58bc0;
   --m-ink: #191a32;
   --radius-card: 1.5rem;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --canvas: #1f1a17;
-    --surface: #2b2420;
-    --surface-2: #342c26;
-    --border: #3f362f;
-    --fg: #fbf6f0;
-    --muted: #b3a392;
-    --primary: #e59f54;
-    --primary-soft: #4a3624;
-    --primary-ink: #ebb06b;
-    --on-primary: #2b2420;
-    --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 14px 34px -14px rgb(0 0 0 / 60%);
-    --m-ink: #9aa9e6;
-  }
 }
 
 * { box-sizing: border-box; }
@@ -142,16 +126,16 @@ li + li { margin-top: .4rem; }
 .glimpse { position: relative; padding-top: 4.5rem; max-width: 26rem; justify-self: end; width: 100%; }
 .peek {
   position: absolute;
-  top: 1.3rem;
-  right: 2.25rem;
-  width: 6.5rem;
-  height: 6.5rem;
+  top: 1.6rem;
+  right: 2.5rem;
+  width: 4.2rem;
+  height: 4.6rem;
   z-index: 0;
   animation: peek 900ms cubic-bezier(.34, 1.4, .64, 1) 300ms both;
 }
 .peek .wink { opacity: 0; animation: wink-show 600ms ease 1.5s both; }
 .peek .open-eye { animation: wink-hide 600ms ease 1.5s both; }
-@keyframes peek { from { transform: translateY(4rem); } to { transform: translateY(0); } }
+@keyframes peek { from { transform: translateY(4.75rem); } to { transform: translateY(0); } }
 @keyframes wink-hide { 0%, 100% { opacity: 1; } 15%, 75% { opacity: 0; } }
 @keyframes wink-show { 0%, 100% { opacity: 0; } 15%, 75% { opacity: 1; } }
 
