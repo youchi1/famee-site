@@ -123,21 +123,22 @@ li + li { margin-top: .4rem; }
 .hero .lede { color: var(--muted); font-size: clamp(1.1rem, 2vw, 1.3rem); max-width: 30rem; margin: 0 0 2rem; }
 
 /* The product glimpse: Ember peeks over a real agenda card */
-.glimpse { position: relative; padding-top: 4.5rem; max-width: 26rem; justify-self: end; width: 100%; }
+.glimpse { position: relative; padding-top: 2.5rem; max-width: 26rem; justify-self: end; width: 100%; }
+/* One scene unit = 1.6px. Scene y 85 sits on the card's top edge, as on the sign-in screen. */
+.peek-ledge { position: relative; }
 .peek {
   position: absolute;
-  top: 1.6rem;
-  right: 2.5rem;
-  width: 4.2rem;
-  height: 4.6rem;
-  z-index: 0;
-  animation: peek 900ms cubic-bezier(.34, 1.4, .64, 1) 300ms both;
+  left: 50%;
+  top: -136px;
+  width: 211.2px;
+  height: 217.6px;
+  margin-left: -105.6px;
+  pointer-events: none;
 }
-.peek .wink { opacity: 0; animation: wink-show 600ms ease 1.5s both; }
-.peek .open-eye { animation: wink-hide 600ms ease 1.5s both; }
-@keyframes peek { from { transform: translateY(4.75rem); } to { transform: translateY(0); } }
-@keyframes wink-hide { 0%, 100% { opacity: 1; } 15%, 75% { opacity: 0; } }
-@keyframes wink-show { 0%, 100% { opacity: 0; } 15%, 75% { opacity: 1; } }
+.peek-ledge .group { position: relative; z-index: 1; }
+.peek-face { z-index: 0; animation: peek-rise 1200ms ease-out 300ms both; }
+.peek-hands { z-index: 2; }
+@keyframes peek-rise { from { transform: translateY(51.2px); } to { transform: translateY(-6.4px); } }
 
 .day { position: relative; z-index: 1; }
 .day-label { margin: 0 0 .4rem .25rem; color: var(--muted); font-size: .85rem; font-weight: 600; }
@@ -233,5 +234,5 @@ li + li { margin-top: .4rem; }
   .features { grid-template-columns: 1fr; gap: 1.75rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .peek, .peek .wink, .peek .open-eye { animation: none; }
+  .peek-face { animation: none; transform: translateY(-6.4px); }
 }

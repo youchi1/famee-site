@@ -30,19 +30,18 @@
       </div>
 
       <div class="glimpse" aria-label="Example of the Famee agenda" role="img">
-        <svg class="peek" viewBox="46 38 38 42" aria-hidden="true">
-          <rect x="48" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
-          <circle cx="52" cy="45" r="2" fill="#fff"/>
-          <g class="open-eye">
-            <rect x="69" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
-            <circle cx="73" cy="45" r="2" fill="#fff"/>
-          </g>
-          <path class="wink" d="M70.5 53.5 Q75.5 60 80.5 53.5" fill="none" stroke="#2b2420" stroke-linecap="round" stroke-width="3"/>
-          <path d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke="#5e3a1c" stroke-width="3"/>
-        </svg>
-
         <div class="day" aria-hidden="true">
           <p class="day-label">Today</p>
+          <div class="peek-ledge">
+          <!-- Ember peek pose from apps/mobile/src/components/famee/ember.tsx, in its 132x136 scene units:
+               the face sits behind the card and rises once, the hands rest over the card edge. -->
+          <svg class="peek peek-face" viewBox="0 0 132 136">
+            <rect x="46" y="62" width="14" height="14" rx="7" fill="#2b2420"/>
+            <circle cx="50.5" cy="72" r="2" fill="#fff"/>
+            <rect x="70" y="62" width="14" height="14" rx="7" fill="#2b2420"/>
+            <circle cx="74.5" cy="72" r="2" fill="#fff"/>
+            <path d="M59 74 H72 V77.5 A6.5 6.5 0 0 1 65.5 84 A6.5 6.5 0 0 1 59 77.5 Z" fill="#5e3a1c"/>
+          </svg>
           <ul class="group">
             <li>
               <span class="bar" style="--c: var(--m-teal)"></span>
@@ -56,6 +55,11 @@
               <span class="avatars"><span class="avatar" style="--c: var(--m-pink)">A</span></span>
             </li>
           </ul>
+          <svg class="peek peek-hands" viewBox="0 0 132 136">
+            <rect x="34" y="83" width="7" height="14" rx="3.5" fill="#e8a35b" opacity=".6"/>
+            <rect x="91" y="83" width="7" height="14" rx="3.5" fill="#e8a35b" opacity=".6"/>
+          </svg>
+          </div>
         </div>
         <div class="day" aria-hidden="true">
           <p class="day-label">Tomorrow</p>
@@ -79,8 +83,10 @@
         <div class="ask" aria-hidden="true">
           <svg class="ask-ember" width="34" height="34" viewBox="42 34 46 46">
             <rect x="48" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
+            <circle cx="52" cy="45" r="2" fill="#fff"/>
             <rect x="69" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
-            <path d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke="#5e3a1c" stroke-width="4"/>
+            <circle cx="73" cy="45" r="2" fill="#fff"/>
+            <path d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke="#5e3a1c" stroke-width="3.5"/>
           </svg>
           <span>Ask mee anything…</span>
           <span class="mic">
