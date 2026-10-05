@@ -128,11 +128,11 @@ li + li { margin-top: .4rem; }
 .peek-ledge { position: relative; }
 .peek {
   position: absolute;
-  left: 50%;
+  /* The scene has 54px of empty stage right of the right hand; -30px leaves that hand 24px from the card edge. */
+  right: -30px;
   top: -136px;
   width: 211.2px;
   height: 217.6px;
-  margin-left: -105.6px;
   pointer-events: none;
 }
 .peek-ledge .group { position: relative; z-index: 1; }
