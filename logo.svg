@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="29.34 24.32 71.36 71.36">
+  <!-- Ember wink pose from apps/mobile/assets/icon.svg; colors follow the viewer's light or dark mode -->
+  <style>
+    .bg { fill: #FBF6F0; }
+    .ink { fill: #2b2420; }
+    .ink-line { stroke: #2b2420; }
+    .glint { fill: #fff; }
+    .smile { stroke: #5e3a1c; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #2b2420; }
+      .ink { fill: #FBF6F0; }
+      .ink-line { stroke: #FBF6F0; }
+      .glint { fill: #2b2420; }
+      .smile { stroke: #e0a872; }
+    }
+  </style>
+  <rect class="bg" x="29.34" y="24.32" width="71.36" height="71.36" rx="16"/>
+  <rect class="ink" x="48" y="40" width="13" height="18" rx="6.5"/>
+  <circle class="glint" cx="52" cy="45" r="2"/>
+  <path class="ink-line" d="M70.5 53.5 Q75.5 60 80.5 53.5" fill="none" stroke-linecap="round" stroke-width="3"/>
+  <path class="smile" d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke-width="3"/>
+</svg>

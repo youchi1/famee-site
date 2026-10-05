@@ -54,6 +54,7 @@ h1, h2 { line-height: 1.2; }
 h1 { margin: 0 0 .5rem; font-size: clamp(2rem, 7vw, 3.25rem); }
 h2 { margin: 0 0 .75rem; font-size: 1.35rem; color: var(--accent); }
 p:last-child, ul:last-child { margin-bottom: 0; }
+.logo { display: block; margin-bottom: 1rem; border-radius: 1.4rem; }
 .meta { color: var(--muted); margin: 0; }
 .summary {
   border-left: .3rem solid var(--accent);
