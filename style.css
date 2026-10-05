@@ -228,9 +228,15 @@ li + li { margin-top: .4rem; }
 .home footer nav a:first-child::before { content: none; }
 .home footer p { margin: 0; }
 
-@media (max-width: 52rem) {
+@media (max-width: 62rem) {
+  .home .hero { gap: 2.5rem; }
+  .hero h1 { font-size: clamp(2.4rem, 5.6vw, 3.4rem); }
+}
+@media (max-width: 44rem) {
   .home .hero { grid-template-columns: 1fr; padding-top: 2rem; }
-  .glimpse { justify-self: stretch; max-width: 28rem; }
+  .glimpse { justify-self: stretch; max-width: none; }
+}
+@media (max-width: 44rem) {
   .features { grid-template-columns: 1fr; gap: 1.75rem; }
 }
 @media (prefers-reduced-motion: reduce) {
