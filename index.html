@@ -5,41 +5,156 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Famee is a family organizer for calendars, tasks, lists, recipes, and meal planning.">
+  <meta name="theme-color" content="#fbf6f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1f1a17" media="(prefers-color-scheme: dark)">
   <title>Famee</title>
   <link rel="icon" href="./logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="home">
   <main>
-    <nav aria-label="Legal and support">
-      <a href="./privacy/">Privacy</a>
+    <nav aria-label="Site navigation">
+      <a href="./">Famee</a>
       <a href="./support/">Support</a>
-      <a href="./delete-account/">Delete account</a>
-      <a href="./terms/">Terms</a>
+      <a href="./privacy/">Privacy</a>
     </nav>
-    <header>
-      <img class="logo" src="./logo.svg" alt="Famee logo" width="96" height="96">
-      <p class="meta">Family organization, in one place</p>
-      <h1>Famee</h1>
-      <p class="summary">Keep family life in sync with shared calendars, tasks, shopping lists, recipes, meal plans, and reminders.</p>
+
+    <header class="hero">
+      <div>
+        <h1>Your family's week, in one calm place.</h1>
+        <p class="lede">Famee keeps everyone's plans, chores, shopping lists, and meals together, so nobody has to be the one who remembers everything.</p>
+        <a class="button" href="https://apps.apple.com/app/id6804414986">Download for iPhone</a>
+        <a class="button quiet" href="https://play.google.com/store/apps/details?id=com.famee">Get it on Android</a>
+      </div>
+
+      <div class="glimpse" aria-label="Example of the Famee agenda" role="img">
+        <svg class="peek" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <radialGradient id="ember-body" cx="35%" cy="30%" r="75%">
+              <stop offset="0%" stop-color="#f6cf9c"/>
+              <stop offset="55%" stop-color="#e9a45e"/>
+              <stop offset="100%" stop-color="#d98c43"/>
+            </radialGradient>
+          </defs>
+          <circle cx="50" cy="50" r="48" fill="url(#ember-body)"/>
+          <g transform="translate(50 40) scale(1.25) translate(-65 -52)">
+            <rect x="48" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
+            <circle cx="52" cy="45" r="2" fill="#fff"/>
+            <g class="open-eye">
+              <rect x="69" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
+              <circle cx="73" cy="45" r="2" fill="#fff"/>
+            </g>
+            <path class="wink" d="M70.5 53.5 Q75.5 60 80.5 53.5" fill="none" stroke="#2b2420" stroke-linecap="round" stroke-width="3"/>
+            <path d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke="#5e3a1c" stroke-width="3"/>
+          </g>
+        </svg>
+
+        <div class="day" aria-hidden="true">
+          <p class="day-label">Today</p>
+          <ul class="group">
+            <li>
+              <span class="bar" style="--c: var(--m-teal)"></span>
+              <span class="time">4:30 PM<small>5:30 PM</small></span>
+              <span class="row-main"><b>Swim practice</b><small>Aquatic center</small></span>
+              <span class="avatars"><span class="avatar" style="--c: var(--m-teal)">L</span></span>
+            </li>
+            <li>
+              <span class="check" style="--c: var(--m-pink)"></span>
+              <span class="row-main"><b>Feed the cat</b><small>6:00 PM</small></span>
+              <span class="avatars"><span class="avatar" style="--c: var(--m-pink)">A</span></span>
+            </li>
+          </ul>
+        </div>
+        <div class="day" aria-hidden="true">
+          <p class="day-label">Tomorrow</p>
+          <ul class="group">
+            <li>
+              <span class="check" style="--c: var(--m-ink)"></span>
+              <span class="row-main"><b>Pack for camping</b></span>
+              <span class="avatars">
+                <span class="avatar" style="--c: var(--m-blue)">M</span>
+                <span class="avatar" style="--c: var(--m-plum)">D</span>
+                <span class="avatar" style="--c: var(--m-pink)">A</span>
+              </span>
+            </li>
+            <li>
+              <span class="bar" style="--c: var(--m-gold)"></span>
+              <span class="row-main"><b>Grandma's birthday dinner</b></span>
+              <span class="chip">All day</span>
+            </li>
+          </ul>
+        </div>
+        <div class="ask" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="url(#ember-body)"/>
+            <g transform="translate(50 50) scale(1.25) translate(-65 -55)">
+              <rect x="48" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
+              <rect x="69" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
+              <path d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke="#5e3a1c" stroke-width="4"/>
+            </g>
+          </svg>
+          <span>Ask mee anything…</span>
+          <span class="mic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>
+          </span>
+        </div>
+      </div>
     </header>
-    <section>
-      <h2>Plan together</h2>
-      <p>Coordinate schedules, meals, shopping, and household work in one shared space. Each family member sees the information and responsibilities that are relevant to them.</p>
+
+    <section class="inside">
+      <h2>What's in Famee</h2>
+      <ul class="features">
+        <li>
+          <span class="tile" style="--c: var(--m-teal)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+          </span>
+          <div>
+            <h3>A shared calendar</h3>
+            <p>See everyone's plans by day, week, or month, each person in their own color.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tile" style="--c: var(--m-pink)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <div>
+            <h3>Tasks and chores</h3>
+            <p>Give a job to one person or a few, make it repeat, and check it off when it's done.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tile" style="--c: var(--m-gold)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+          </span>
+          <div>
+            <h3>Lists, recipes, and meals</h3>
+            <p>Shopping lists everyone can add to, a home for your recipes, and a plan for the week's meals.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tile" style="--c: var(--primary)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          </span>
+          <div>
+            <h3>Ember, when you want help</h3>
+            <p>Tell Ember what's coming up or send a photo of a recipe, and it fills in the details. Everything also works by hand.</p>
+          </div>
+        </li>
+      </ul>
     </section>
-    <section>
-      <h2>Stay on top of family life</h2>
-      <p>Use clear assignments, useful reminders, recurring plans, and shared lists to reduce follow-up work and keep everyone aligned.</p>
-    </section>
-    <section>
-      <h2>Get help when you want it</h2>
-      <p>Famee includes an assistant that can help turn ideas, messages, and recipe photos into useful family plans. Every core feature also has a complete manual path.</p>
-    </section>
-    <section>
-      <h2>Contact</h2>
-      <p>For product support, email <a href="mailto:support@famee.app">support@famee.app</a>.</p>
-      <p>For privacy requests, email <a href="mailto:privacy@famee.app">privacy@famee.app</a>.</p>
-    </section>
+
+    <footer>
+      <nav aria-label="Legal and support">
+        <a href="./support/">Support</a>
+        <a href="./privacy/">Privacy</a>
+        <a href="./terms/">Terms</a>
+        <a href="./delete-account/">Delete account</a>
+      </nav>
+      <p><a href="mailto:support@famee.app">support@famee.app</a></p>
+    </footer>
   </main>
 </body>
 </html>
