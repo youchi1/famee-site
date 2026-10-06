@@ -7,11 +7,11 @@
   <meta name="description" content="Famee is a family organizer for calendars, tasks, lists, recipes, and meal planning.">
   <meta name="theme-color" content="#fbf6f0">
   <title>Famee</title>
-  <link rel="icon" href="./logo.svg" type="image/svg+xml">
+  <link rel="icon" href="./logo.svg?v=10" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="./style.css?v=9">
+  <link rel="stylesheet" href="./style.css?v=10">
 </head>
 <body class="home">
   <main>
@@ -89,12 +89,19 @@
           </ul>
         </div>
         <div class="ask" aria-hidden="true">
-          <svg class="ask-ember" width="34" height="34" viewBox="42 34 46 46">
-            <rect x="48" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
-            <circle cx="52" cy="45" r="2" fill="#fff"/>
-            <rect x="69" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
-            <circle cx="73" cy="45" r="2" fill="#fff"/>
-            <path d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke="#5e3a1c" stroke-width="3.5"/>
+          <!-- Ember idle pose, using the app composer's size and face crop. -->
+          <svg class="ask-ember" width="30" height="28" viewBox="35 27 60 56">
+            <g class="ember-face">
+              <g class="ember-eye">
+                <rect x="48" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
+                <circle cx="52" cy="45" r="2" fill="#fff"/>
+              </g>
+              <g class="ember-eye">
+                <rect x="69" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
+                <circle cx="73" cy="45" r="2" fill="#fff"/>
+              </g>
+              <path d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke="#5e3a1c" stroke-width="3"/>
+            </g>
           </svg>
           <span>Ask mee anything…</span>
           <span class="mic">

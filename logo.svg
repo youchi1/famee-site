@@ -1,8 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="29.34 24.32 71.36 71.36">
-  <!-- Ember wink pose from apps/mobile/assets/icon.svg -->
-  <rect x="29.34" y="24.32" width="71.36" height="71.36" rx="16" fill="#FBF6F0"/>
-  <rect x="48" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/>
-  <circle cx="52" cy="45" r="2" fill="#fff"/>
-  <path d="M70.5 53.5 Q75.5 60 80.5 53.5" fill="none" stroke="#2b2420" stroke-linecap="round" stroke-width="3"/>
-  <path d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke="#5e3a1c" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 57.82 57.82">
+  <!-- Ember idle, ember.tsx 130x108 stage units, 14deg tilt, centered. -->
+  <rect width="57.82" height="57.82" fill="#FBF6F0"/>
+  <g transform="translate(19.51 16.84) rotate(14) translate(-54.5 -49)"><rect x="48" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/><circle cx="52" cy="45" r="2" fill="#fff"/><rect x="69" y="40" width="13" height="18" rx="6.5" fill="#2b2420"/><circle cx="73" cy="45" r="2" fill="#fff"/><path d="M51.5 64 V65 A13.5 13.5 0 0 0 78.5 65 V64" fill="none" stroke="#5e3a1c" stroke-width="3"/></g>
 </svg>

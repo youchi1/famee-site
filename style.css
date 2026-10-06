@@ -70,7 +70,7 @@ nav a:first-child::before {
   content: "";
   width: 2rem;
   height: 2rem;
-  background: url("./logo.svg") center / contain no-repeat;
+  background: url("./logo.svg?v=10") center / contain no-repeat;
   border-radius: .6rem;
 }
 header, section {
@@ -220,6 +220,12 @@ li + li { margin-top: .4rem; }
   color: var(--muted);
   font-size: .95rem;
 }
+.ask-ember { flex: none; overflow: visible; }
+/* Idle pose timing and eye scale from apps/mobile/src/components/famee/ember.tsx. */
+.ask-ember .ember-face { animation: ember-bob 4200ms ease-in-out infinite; }
+.ask-ember .ember-eye { transform-box: fill-box; transform-origin: center; animation: ember-blink 4600ms ease infinite; }
+@keyframes ember-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes ember-blink { 0%, 92%, 100% { transform: scaleY(1); } 96% { transform: scaleY(.12); } }
 .ask span { flex: 1; }
 .ask .mic { flex: none; width: 2.1rem; height: 2.1rem; border-radius: 50%; background: var(--primary); display: grid; place-items: center; }
 
@@ -269,4 +275,5 @@ li + li { margin-top: .4rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .peek-face { animation: none; transform: translateY(-6.4px); }
+  .ask-ember .ember-face, .ask-ember .ember-eye { animation: none; }
 }
