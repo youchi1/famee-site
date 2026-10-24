@@ -138,7 +138,7 @@ li + li { margin-top: .4rem; }
 }
 
 /* Home page */
-.home main { width: min(68rem, calc(100% - 2rem)); padding-top: 1.5rem; }
+.home main { width: min(68rem, calc(100% - 2rem)); }
 .home section, .home header { background: none; box-shadow: none; padding: 0; border-radius: 0; }
 
 .home .hero {
@@ -276,6 +276,10 @@ li + li { margin-top: .4rem; }
 @media (max-width: 44rem) {
   .home .hero { grid-template-columns: 1fr; padding-top: 2rem; }
   .glimpse { justify-self: stretch; max-width: none; }
+}
+@media (max-width: 74rem) {
+  /* Below 68rem + 2 x 30px (plus a scrollbar) the page gutter is under 30px; -16px keeps the peek inside the viewport. */
+  .peek { right: -16px; }
 }
 @media (max-width: 44rem) {
   .features { grid-template-columns: 1fr; gap: 1.75rem; }
