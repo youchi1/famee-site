@@ -55,7 +55,7 @@ nav {
   margin-bottom: 1.5rem;
   font-weight: 600;
 }
-nav a { color: var(--muted); text-decoration: none; }
+nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
 nav a:hover { color: var(--fg); }
 nav a:first-child {
   display: inline-flex;
@@ -123,11 +123,18 @@ li + li { margin-top: .4rem; }
 .store span { display: flex; flex-direction: column; font-size: 1.3rem; font-weight: 600; line-height: 1.1; }
 .store small { font-size: .78rem; font-weight: 500; color: var(--muted); margin-bottom: .1rem; }
 @media (max-width: 30rem) {
+  /* Keep the brand and three links on one line on phones. */
+  nav { gap: .5rem .75rem; font-size: .9rem; }
   .stores { gap: .5rem; }
   .store { flex: 1; justify-content: center; gap: .6rem; min-height: 3.25rem; padding: .5rem .75rem; border-radius: .875rem; }
   .store svg { width: 1.5rem; height: 1.5rem; }
   .store span { font-size: 1.05rem; }
   .store small { font-size: .68rem; }
+}
+
+@media (max-width: 24rem) {
+  /* Below 384px only the logo shows; the text stays as the link's accessible name. */
+  nav a:first-child { font-size: 0; }
 }
 
 /* Home page */
