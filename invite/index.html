@@ -41,6 +41,15 @@
   </main>
   <script>
     document.getElementById("open-app").href = "famee://invite" + window.location.search;
+    // Android: go straight to Google Play. The install referrer carries this
+    // link, so the app opens it on its first launch.
+    if (/Android/i.test(navigator.userAgent)) {
+      var link = "famee_link=" + encodeURIComponent("/invite" + window.location.search);
+      window.location.replace(
+        "https://play.google.com/store/apps/details?id=com.famee&referrer=" +
+          encodeURIComponent(link)
+      );
+    }
   </script>
 </body>
 </html>
