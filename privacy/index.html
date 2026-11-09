@@ -19,7 +19,7 @@
     </nav>
     <header>
       <h1>Famee Privacy Policy</h1>
-      <p class="meta"><strong>Effective date:</strong> November 7, 2026</p>
+      <p class="meta"><strong>Effective date:</strong> November 9, 2026</p>
       <p class="summary">Famee is a family organizer. It stores information that you and your family add so you can coordinate calendars, tasks, lists, recipes, meals, reminders, and assistant conversations. This policy explains what we process, why we process it, and what choices you have.</p>
     </header>
 
@@ -38,7 +38,8 @@
         <li><strong>Assistant information:</strong> assistant conversations, message text, attachments, structured tool actions, model responses, and technical model identifiers.</li>
         <li><strong>Notification information:</strong> device push tokens, scheduled reminder times, snooze and skip state, related task or event identifiers, delivery time, and notification history.</li>
         <li><strong>Purchase information:</strong> product, entitlement, subscription status, store transaction identifiers, and family subscription binding. Apple or Google processes payment details. Famee does not receive your full payment card number.</li>
-        <li><strong>Technical information:</strong> information needed to operate and protect the service, such as device and app configuration, time zone, request records, errors, and security events. Famee does not currently use an advertising SDK.</li>
+        <li><strong>Connected calendar information:</strong> if you connect Google Calendar or iCloud Calendar, the account email, an encrypted authorization token or app-specific password, the calendars that you choose, and their events (section 6).</li>
+        <li><strong>Technical information:</strong> information needed to operate and protect the service, such as device and app configuration, time zone, request records, errors, security events, and app usage analytics (section 7). Famee does not currently use an advertising SDK.</li>
       </ul>
     </section>
 
@@ -46,6 +47,8 @@
       <h2>3. How we use information</h2>
       <ul>
         <li>Provide and synchronize the family organizer across members and devices.</li>
+        <li>Sync the Google and iCloud calendars that you connect, in both directions.</li>
+        <li>Understand how the app is used so we can improve it.</li>
         <li>Authenticate users and protect family data.</li>
         <li>Schedule reminders and deliver push notifications that you enable.</li>
         <li>Process assistant requests and perform actions that you ask the assistant to perform.</li>
@@ -73,7 +76,32 @@
     </section>
 
     <section>
-      <h2>6. Service providers</h2>
+      <h2>6. Connected calendars</h2>
+      <p>You can connect a Google Calendar or iCloud Calendar account to Famee. Connecting is optional, and only you can connect your own account.</p>
+      <ul>
+        <li><strong>Google Calendar:</strong> you sign in with Google and allow Famee to see your list of calendars and to see and edit events on them (the <code>calendar.events</code> and <code>calendar.calendarlist.readonly</code> permissions). Famee stores the account email and an authorization token.</li>
+        <li><strong>iCloud Calendar:</strong> you enter your Apple Account email and an app-specific password that you create for Famee. Famee does not ask for your main Apple Account password. You can revoke the app-specific password at any time in your Apple Account settings.</li>
+      </ul>
+      <p>Famee encrypts authorization tokens and app-specific passwords before it stores them, and uses them only to sync the calendars that you choose. For those calendars, Famee copies events (titles, times, locations, notes, recurrence, and alerts) for a window of about 6 months back and 24 months forward. Changes that you make in Famee to those events, and events that you add to those calendars in Famee, are written back to your Google or iCloud account. Famee does not send invitations to event attendees.</p>
+      <p>Events from a connected calendar are shared with your family in Famee under the same family sharing rules as other content (section 4). You can limit who sees each calendar and each event in Famee. These limits apply only in Famee and do not change sharing in Google or iCloud. When you use an AI feature, connected calendar events can be part of the family content that is sent for your request (section 5).</p>
+      <p>When you disconnect an account, or when you leave a family, Famee stops syncing and removes that account's events from Famee. It deletes the stored token or password as soon as it has shut down the sync with Google or iCloud. The events stay in your Google or iCloud account.</p>
+      <p>Famee's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. Famee does not use Google Calendar data for advertising, does not sell it, and does not use it to train AI models.</p>
+    </section>
+
+    <section>
+      <h2>7. Analytics and error reports</h2>
+      <p>Famee uses PostHog, hosted in the European Union, to understand how the app is used and to find errors. Famee sends:</p>
+      <ul>
+        <li>which screens you open and onboarding steps you complete, with your account identifier, app version, build type, and device and operating system information;</li>
+        <li>error and crash reports from the app;</li>
+        <li>subscription events from RevenueCat, joined to the same account identifier;</li>
+        <li>a report when a connected calendar event cannot be imported, with the calendar provider, a reason code, and internal calendar and family identifiers.</li>
+      </ul>
+      <p>Famee does not send the content of your events, tasks, lists, recipes, meals, or assistant conversations to PostHog, and does not record your screen. Analytics is not used for advertising.</p>
+    </section>
+
+    <section>
+      <h2>8. Service providers</h2>
       <p>Famee uses service providers to operate the app. Depending on the feature and platform, these can include:</p>
       <ul>
         <li><strong>Convex</strong> for the application database, server functions, scheduled jobs, authentication components, and file storage.</li>
@@ -81,46 +109,48 @@
         <li><strong>Vercel AI Gateway</strong>, and the AI model providers and hosts listed in section 5, for assistant requests.</li>
         <li><strong>Apple and Google</strong> for sign-in, app distribution, and store purchases.</li>
         <li><strong>RevenueCat</strong> for subscription status and entitlement management.</li>
+        <li><strong>Google Calendar and iCloud Calendar</strong> for the calendars that you connect (section 6).</li>
+        <li><strong>PostHog</strong> for app usage analytics and error reports (section 7).</li>
       </ul>
       <p>These providers receive only the information needed to supply their service. They can process information in countries other than your own.</p>
     </section>
 
     <section>
-      <h2>7. Push notifications</h2>
+      <h2>9. Push notifications</h2>
       <p>If you enable notifications, Famee stores a device push token and sends notification content through Expo and the platform push service. You can change notification preferences in Famee and can disable notification permission in your device settings.</p>
     </section>
 
     <section>
-      <h2>8. Retention and deletion</h2>
+      <h2>10. Retention and deletion</h2>
       <p>Famee keeps active family content while it is needed to provide the service or until an authorized member deletes or replaces it. Some shared content can remain in a family after one member leaves or deletes an account because other family members still use that content.</p>
       <p>Account deletion uses a 30-day recovery period. During deletion, Famee removes active memberships and starts cleanup of private assistant conversations, member settings, avatar links, and owned file references. After the recovery period, the user record is removed. Recovery cannot restore private data that cleanup has already removed. If other members remain in your family, your name and relationship stay on the family's shared items (for example, events and tasks you created) so the family's history stays readable. If you are the family Owner, deleting your account also deletes the family and all its data if you are its only member or the family has no access to Famee. You must confirm family deletion. This can delete a family with other members, but those members keep their accounts. If the family has access to Famee and other members remain, the Owner must transfer ownership before deleting their account. In a family with access to Famee, the last Guardian cannot delete their account while protected family profiles still depend on them. If the family has no access to Famee, any member can delete their own account, including the last Guardian.</p>
       <p>Assistant conversations can remain until you delete the account or an applicable cleanup process removes them. Temporary upload intents expire after about one hour, and unreferenced uploaded files are reclaimed. Some operational records, notification history, security records, and backups can remain for a limited period after deletion when needed for reliability, fraud prevention, dispute handling, or legal compliance.</p>
     </section>
 
     <section>
-      <h2>9. Children and managed profiles</h2>
+      <h2>11. Children and managed profiles</h2>
       <p>Famee is intended to be set up and managed by adults or guardians. A guardian can create an account-less profile for a child or another dependent. Such a profile has no independent login and no direct device access. Famee is not intended for a child to create an independent account without authorization from a parent or guardian.</p>
       <p>If you believe a child provided personal information without proper authorization, contact us so we can review and remove it where appropriate.</p>
     </section>
 
     <section>
-      <h2>10. Security</h2>
+      <h2>12. Security</h2>
       <p>Famee uses access controls, authenticated requests, family-scoped permissions, platform-secure token storage, and service-provider security features. No storage or transmission system is completely secure. Please protect your account, device, and family invitations.</p>
     </section>
 
     <section>
-      <h2>11. Your choices and rights</h2>
+      <h2>13. Your choices and rights</h2>
       <p>You can review and correct many profile and family settings in the app. You can change notification preferences, remove content when your role allows it, leave a family when permitted, and request account deletion in the app.</p>
       <p>You can contact us to request access, correction, deletion, or restriction of personal information where applicable. Famee does not currently provide a self-service data export. We may need to verify your identity and authority over the relevant family data before completing a request.</p>
     </section>
 
     <section>
-      <h2>12. Changes to this policy</h2>
+      <h2>14. Changes to this policy</h2>
       <p>We can update this policy when Famee adds features, changes providers, or must meet new legal requirements. We will change the effective date and provide additional notice in the app when a change materially affects how we process personal information.</p>
     </section>
 
     <section>
-      <h2>13. Contact</h2>
+      <h2>15. Contact</h2>
       <p>For privacy questions or requests, email <a href="mailto:support@famee.app">support@famee.app</a>.</p>
     </section>
   </main>
